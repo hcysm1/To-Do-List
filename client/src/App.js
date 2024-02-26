@@ -1,9 +1,15 @@
 import "./App.css";
 //import components
 import Header from "./components/Header";
+import TodoForm from "./components/TodoForm";
 
 function App() {
-  return <Header />;
+  return (
+    <div>
+      <Header />
+      <TodoForm />
+    </div>
+  );
 }
 
 export default App;
