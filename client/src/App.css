@@ -8,10 +8,54 @@ header {
 }
 
 header h1 {
-  font-size: 100px;
+  font-size: 50px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 input {
   font-size: 20px;
   width: 100%;
+  border-radius: 10px;
+  padding: 15px;
+  border-width: 5px;
+  
+}
+
+.task {
+  background-color: #608389;
+  padding: 15px;
+  font-size: 20px;
+  margin-top: 5px;
+  border-radius: 10px;
+  overflow-x: hidden;
+  cursor: pointer;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.task span {
+  color: white;
+}
+
+.icon {
+  float: right;
+  padding-left: 5px;
+}
+
+.done {
+  float: left;
+  padding-right: 5px;
+}
+
+article {
+  display: grid;
+}
+
+.complete {
+  text-decoration:line-through;
+  
+
+}
+
+.incomplete {
+  text-decoration: none;
 }
