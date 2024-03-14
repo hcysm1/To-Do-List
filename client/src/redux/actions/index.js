@@ -1,5 +1,12 @@
 import axios from "axios";
-import { ADDNEW_TODO, GETALL_TODO, TOGGLE_TODO, DELETE_TODO } from "./type";
+import {
+  ADDNEW_TODO,
+  GETALL_TODO,
+  TOGGLE_TODO,
+  DELETE_TODO,
+  EDIT_TODO,
+  TOGGLE_TABS,
+} from "./type";
 
 const API_URL = "http://localhost:8000";
 
@@ -37,4 +44,17 @@ export const deleteTodo = (id) => async (dispatch) => {
   } catch (error) {
     console.log("error while calling deleteTodo API", error.message);
   }
+};
+
+export const editTodo = (id, data) => async (dispatch) => {
+  try {
+    const res = await axios.put(`${API_URL}/todos/${id}`, { data });
+    dispatch({ type: EDIT_TODO, payload: res.data });
+  } catch (error) {
+    console.log("error while calling editTodo API", error.message);
+  }
+};
+
+export const toggleTab = (tab) => async (dispatch) => {
+  dispatch({ type: TOGGLE_TABS, selected: tab });
 };

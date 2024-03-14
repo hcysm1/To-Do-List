@@ -19,7 +19,7 @@ const TodoForm = () => {
   return (
     <form className="form" onSubmit={onFormSubmit}>
       <input
-        className="input"
+        className="input-item"
         placeholder="Enter a new Item..."
         onChange={onInputChange}
         value={text}
