@@ -9,7 +9,7 @@ import {
   TOGGLE_TABS,
 } from "./type";
 
-const API_URL = "http://localhost:8000";
+const API_URL = "https://to-do-tlgm.onrender.com";
 
 export const addNewTodo = (data) => async (dispatch) => {
   try {
