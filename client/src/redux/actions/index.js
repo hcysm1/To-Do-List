@@ -1,4 +1,5 @@
 import axios from "axios";
+
 import {
   ADDNEW_TODO,
   GETALL_TODO,
@@ -8,7 +9,7 @@ import {
   TOGGLE_TABS,
 } from "./type";
 
-const API_URL = "http://localhost:8000";
+const API_URL = process.env.API_URL;
 
 export const addNewTodo = (data) => async (dispatch) => {
   try {
