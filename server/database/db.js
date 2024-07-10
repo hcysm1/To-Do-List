@@ -7,14 +7,17 @@ const PASSWORD = process.env.DB_PASSWORD;
 
 const connection = () => {
   const MONGODB_URI = `mongodb+srv://${USERNAME}:${PASSWORD}@mern-todo.iorxsaj.mongodb.net/?retryWrites=true&w=majority&appName=mern-todo`;
-  mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+  mongoose.connect(MONGODB_URI);
+
   mongoose.connection.on("connected", () => {
-    console.log("database connected successfully");
+    console.log("Database connected successfully");
   });
+
   mongoose.connection.on("disconnected", () => {
-    console.log("database connected");
+    console.log("Database disconnected");
   });
-  mongoose.connection.on("error", () => {
+
+  mongoose.connection.on("error", (error) => {
     console.log("Error while connecting with the database", error.message);
   });
 };
