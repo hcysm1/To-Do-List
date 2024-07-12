@@ -1,5 +1,5 @@
 body {
-  width:50%;
+  width:90%;
   margin: 0 auto;
   background-color:beige;
 }
@@ -97,4 +97,66 @@ article {
   margin-top: 20px;
   margin-right: 20px;
   border-style: none;
+}
+
+/* Tablets and smaller screens */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 40px;
+    /* Reduce header font size */
+  }
+
+  .input-item {
+    font-size: 18px;
+    /* Reduce input item font size */
+    padding: 10px;
+    /* Reduce padding */
+  }
+
+  .task {
+    font-size: 18px;
+    /* Reduce task font size */
+    padding: 10px;
+    /* Reduce padding */
+  }
+
+  .button,
+  .button-selected {
+    font-size: 18px;
+    /* Reduce button font size */
+    padding: 10px 24px;
+    /* Adjust padding */
+    margin-top: 15px;
+    /* Adjust margin top */
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 30px;
+    /* Further reduce header font size */
+  }
+
+  .input-item {
+    font-size: 16px;
+    /* Further reduce input item font size */
+  }
+
+  .task {
+    font-size: 16px;
+    /* Further reduce task font size */
+    padding: 8px;
+    /* Further reduce padding */
+  }
+
+  .button,
+  .button-selected {
+    font-size: 16px;
+    /* Further reduce button font size */
+    padding: 8px 16px;
+    /* Adjust padding */
+    margin-top: 10px;
+    /* Adjust margin top */
+  }
 }
